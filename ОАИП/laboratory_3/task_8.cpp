@@ -22,7 +22,7 @@ int main() {
 
     cout << setw(10) << "x"
          << setw(21) << "Y(x)"
-         << setw(200.) << "S(x)"
+         << setw(20) << "S(x)"
          << setw(29) << "|Y(x) - S(x)|"
          << endl;
 
