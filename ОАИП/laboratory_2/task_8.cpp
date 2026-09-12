@@ -20,7 +20,7 @@ int main() {
     cout << "1) 2x" << endl;
     cout << "2) x^2" << endl;
     cout << "3) x/3" << endl;
-    cout << "Choose a number: "1;
+    cout << "Choose a number: ";
     cin >> functionChoice;
 
     if (z >= 0) {

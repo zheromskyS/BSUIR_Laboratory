@@ -12,6 +12,6 @@ int32_t main() {
     cout << "Enter z: ";
     cin >> z;
 
-    cout << pow(M_E, fabs(x - y)) * pow(fabs(x - y), x + y) / (atan(x) + atan(z)) + cbrt(pow(x, 6) + pow(log(y), 2))<< endl;
+    cout << "phi = " << pow(M_E, fabs(x - y)) * pow(fabs(x - y), x + y) / (atan(x) + atan(z)) + cbrt(pow(x, 6) + pow(log(y), 2))<< endl;
     return 0;
 }
