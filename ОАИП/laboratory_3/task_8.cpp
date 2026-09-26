@@ -6,17 +6,30 @@ long long factorialRecursive(int x) {
     return x + factorialRecursive(x - 1);
 }
 
-int main() {
-    double a, b, h, n;
+double inputNumber(const string& message) {
+    string input;
+    double number;
+    char extra;
+    cout << message;
 
-    cout << "Enter a: ";
-    cin >> a;
-    cout << "Enter b: ";
-    cin >> b;
-    cout << "Enter h: ";
-    cin >> h;
-    cout << "Enter n: ";
-    cin >> n;
+    getline(cin, input);
+
+    stringstream stream(input);
+
+    if (stream >> number && !(stream >> extra)) {
+        return number;
+    }
+
+    cout << "Invalid input. Please enter a number.\n";
+
+    return inputNumber(message);
+}
+
+int main() {
+    double a = inputNumber("Please enter the value of a: ");
+    double b = inputNumber("Please enter the value of b: ");
+    double h = inputNumber("Please enter the value of h: ");
+    double n = inputNumber("Please enter the value of n: ");
 
     cout << fixed << setprecision(10);
 
@@ -39,4 +52,6 @@ int main() {
 
        a = a < b - h / 2 ? a += h : a;
    }
+
+    return 0;
 }
