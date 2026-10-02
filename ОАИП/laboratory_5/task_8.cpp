@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 
 double inputNumber(const string& message) {
@@ -42,12 +43,13 @@ void inputArrayRandomly(int elementCount, int* numbers) {
 }
 
 void chooseInputMethod(int elementCount, int* numbers) {
-    cout << "Choose input method:\n";
+    cout << "\nChoose input method:\n";
     cout << "1) Enter elements manually\n";
     cout << "2) Generate elements randomly\n";
-    cout << "Your choice: ";
 
-    int choice = inputNumber("");
+    int choice = inputNumber("Your choice: ");
+
+    cout << '\n';
 
 
     switch (choice) {
@@ -88,7 +90,7 @@ int main() {
 
     sumAfterLastNegative = haveNegative ? sumAfterLastNegative : 0;
 
-    cout << "Sum after the last negative element: "
+    cout << "\nSum after the last negative element: "
         << sumAfterLastNegative << '\n';
 
     delete[] numbers;
