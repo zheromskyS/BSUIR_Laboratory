@@ -39,7 +39,7 @@ void chooseInputMethod(double& x, double& y, double& z) {
             break;
         }
         case 2: {
-            cout << "Using default values:\n";
+            cout << "\nUsing default values:\n";
             cout << "x = " << x << "\n";
             cout << "y = " << y << "\n";
             cout << "z = " << z << "\n";
@@ -60,7 +60,7 @@ int32_t main() {
 
     chooseInputMethod(x, y, z);
 
-    cout << "phi = " << pow(M_E, fabs(x - y)) * pow(fabs(x - y), x + y)
+    cout << endl << "phi = " << pow(M_E, fabs(x - y)) * pow(fabs(x - y), x + y)
                         / (atan(x) + atan(z)) + cbrt(pow(x, 6)
                         + pow(log(y), 2))<< endl;
 
