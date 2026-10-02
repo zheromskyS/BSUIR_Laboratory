@@ -23,7 +23,7 @@ void printResults(
     double a, double b, double h, double n) {
 
     for (int k = 0; k < n; k++) {
-        cout << "x = " << a << "    result = "
+        cout << "x = " << setw(5) << a << "     result = "
              <<  chosenFunction(a, k) << endl;
 
         a = a < b - h / 2 ? a += h : a;
@@ -40,6 +40,7 @@ void chooseFunction(double a, double b, double h, double n) {
 
     cout << "\nChoose a function number: ";
     cin >> numberFunctionChoice;
+    cout << endl;
 
     switch (numberFunctionChoice) {
         case 1:
