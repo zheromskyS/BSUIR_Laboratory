@@ -1,14 +1,29 @@
 #include<bits/stdc++.h>
+
 using namespace std;
 
+double inputNumber(const string& message) {
+    string input;
+    double number;
+    char extra;
+    cout << message;
+
+    getline(cin, input);
+
+    stringstream stream(input);
+
+    if (stream >> number && !(stream >> extra)) {
+        return number;
+    }
+
+    cout << "\nInvalid input. Please enter a number.\n" << '\n';
+
+    return inputNumber(message);
+}
+
 int main() {
-    int rowCount, columnCount;
-
-    cout << "Enter number of rows: ";
-    cin >> rowCount;
-
-    cout << "Enter cols: ";
-    cin >> columnCount;
+    int rowCount = inputNumber("Enter number of rows: ");
+    int columnCount = inputNumber("Enter number of columns: ");
 
     int arr[rowCount][columnCount];
 
@@ -38,6 +53,8 @@ int main() {
             }
         }
     }
+
+    cout << endl;
 
     for (int i = 0; i < rowCount; i++) {
         for (int j = 0; j < columnCount; j++) {
